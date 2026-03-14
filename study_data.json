@@ -1,0 +1,26 @@
+[
+    {
+        "ders": "Python",
+        "sure": 90,
+        "tarih": "2026-03-14",
+        "verim": 8
+    },
+    {
+        "ders": "Matematik",
+        "sure": 60,
+        "tarih": "2026-03-15",
+        "verim": 7
+    },
+    {
+        "ders": "java",
+        "sure": 60,
+        "verim": 4,
+        "tarih": "2026-03-14"
+    },
+    {
+        "ders": "python",
+        "sure": 35,
+        "verim": 5,
+        "tarih": "2026-03-14"
+    }
+]
