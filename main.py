@@ -1,4 +1,7 @@
 import utils
+import analysis
+
+result= utils.verileri_oku()
 
 while True:
     print("""
@@ -19,7 +22,11 @@ while True:
     elif secim==2:
         utils.verileri_listele()
     elif secim==3:
-        pass
+        analysis.toplam_sure(result)
+        analysis.ortalama_verim(result)
+        analysis.en_cok_calisilan_ders(result)
+        analysis.gun_bazli_analiz(result)
+        analysis.ders_bazli_analiz(result)
     elif secim==4:
         pass
     elif secim==5:
