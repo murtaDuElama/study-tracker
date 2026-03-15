@@ -1,32 +1,34 @@
-def toplam_sure(result):
+def toplam_sure(result,tarih):
     sure=[]
     toplam=0
     for kayit in result:
-        sure.append(kayit["sure"])
+        if kayit["tarih"] == tarih:
+            sure.append(kayit["sure"])
     for num in range(len(sure)):
         toplam+=sure[num]
-
-    print(f"Toplam çalışma süresi:{toplam}")
     return toplam
 
-def ortalama_verim(result):
-    verim=[]
-    toplamVerim=0
-    ortVerim=0
+def gun_bazli_verim(result, tarih):
+    toplamVerim = 0
+    kayitSayisi = 0
+
     for kayit in result:
-        verim.append(kayit["verim"])
-    for num in range(len(verim)):
-        toplamVerim+=verim[num]
-    ortVerim=toplamVerim/len(verim)
+        if kayit["tarih"] == tarih:
+            toplamVerim += kayit["verim"]
+            kayitSayisi += 1
 
-    print(f"Ortalama verim:{ortVerim}")
-    return ortVerim
+    if kayitSayisi > 0:
+        ort = toplamVerim / kayitSayisi
+        return ort
+    else:
+        return None
 
-def en_cok_calisilan_ders(result):
+def en_cok_calisilan_ders(result,tarih):
     dictDers={}
     for kayit in result:
-        dictDers[kayit["ders"]]=kayit["sure"]
-    print(max(dictDers.keys()))
+        if kayit["tarih"] == tarih:
+            dictDers[kayit["ders"]]=kayit["sure"]
+    return max(dictDers.keys())
 
 
 def ders_bazli_analiz(result):
@@ -45,9 +47,11 @@ def ders_bazli_analiz(result):
 
 def gun_bazli_analiz(result):
     gunler = {}
+    dersler=[]
 
     for kayit in result:
         tarih = kayit["tarih"]
+        dersler.append(kayit["ders"])
 
         if tarih in gunler:
             gunler[tarih] += kayit["sure"]
@@ -55,7 +59,7 @@ def gun_bazli_analiz(result):
             gunler[tarih] = kayit["sure"] 
 
     for tarih, sure in gunler.items():
-        print(f"{tarih} : {sure} dk")
+        print(f"{tarih} : {sure} dk , verim {gun_bazli_verim(result,tarih)} , ders:{en_cok_calisilan_ders(result,tarih)} , süre: {toplam_sure(result,tarih)}")
 
 def oneri_ver(veriler):
     pass
