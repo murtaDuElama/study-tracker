@@ -41,25 +41,18 @@ def ders_bazli_analiz(result):
             dersler[ders] += kayit["sure"]
         else:
             dersler[ders] = kayit["sure"] 
-
-    for ders, sure in dersler.items():
-        print(f"{ders} : {sure} dk")
+    return dersler
 
 def gun_bazli_analiz(result):
     gunler = {}
-    dersler=[]
 
     for kayit in result:
         tarih = kayit["tarih"]
-        dersler.append(kayit["ders"])
 
         if tarih in gunler:
             gunler[tarih] += kayit["sure"]
         else:
-            gunler[tarih] = kayit["sure"] 
-
-    for tarih, sure in gunler.items():
-        print(f"{tarih} : {sure} dk , verim {gun_bazli_verim(result,tarih)} , ders:{en_cok_calisilan_ders(result,tarih)} , süre: {toplam_sure(result,tarih)}")
-
+            gunler[tarih] = kayit["sure"]
+    return gunler
 def oneri_ver(veriler):
     pass

@@ -1,5 +1,6 @@
 import utils
 import analysis
+import charts
 
 result= utils.verileri_oku()
 
@@ -8,9 +9,10 @@ while True:
           1-)Çalışma kaydı ekle
           2-)Kayıtları listele
           3-)Analiz yap
-          4-)Grafik göster
-          5-)Öneri ver
-          6-)Çıkış
+          4-)Gün bazlı grafik göster
+          5-)Ders bazlı grafik göster
+          6-)Öneri ver
+          7-)Çıkış
           """)
     try:
         secim = int(input("Seçim yapınız:"))
@@ -25,10 +27,13 @@ while True:
         analysis.gun_bazli_analiz(result)
         analysis.ders_bazli_analiz(result)
     elif secim==4:
-        pass
+        charts.ders_grafigi(result)
+        charts.gun_grafigi(result)
     elif secim==5:
         pass
     elif secim==6:
+        pass
+    elif secim==7:
         print("Programdan çıktınız.")
         break
     else:

@@ -12,15 +12,51 @@
         "verim": 7
     },
     {
-        "ders": "java",
-        "sure": 60,
-        "verim": 4,
-        "tarih": "2026-03-14"
+        "ders": "Java",
+        "sure": 75,
+        "tarih": "2026-03-16",
+        "verim": 6
     },
     {
-        "ders": "python",
-        "sure": 35,
-        "verim": 5,
-        "tarih": "2026-03-14"
+        "ders": "Algoritma",
+        "sure": 120,
+        "tarih": "2026-03-17",
+        "verim": 9
+    },
+    {
+        "ders": "Python",
+        "sure": 45,
+        "tarih": "2026-03-18",
+        "verim": 7
+    },
+    {
+        "ders": "Veri Yapıları",
+        "sure": 80,
+        "tarih": "2026-03-19",
+        "verim": 8
+    },
+    {
+        "ders": "İngilizce",
+        "sure": 50,
+        "tarih": "2026-03-20",
+        "verim": 6
+    },
+    {
+        "ders": "Matematik",
+        "sure": 100,
+        "tarih": "2026-03-21",
+        "verim": 9
+    },
+    {
+        "ders": "Java",
+        "sure": 65,
+        "tarih": "2026-03-22",
+        "verim": 7
+    },
+    {
+        "ders": "Algoritma",
+        "sure": 110,
+        "tarih": "2026-03-23",
+        "verim": 8
     }
 ]
