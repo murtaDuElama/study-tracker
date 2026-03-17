@@ -27,12 +27,11 @@ while True:
         analysis.gun_bazli_analiz(result)
         analysis.ders_bazli_analiz(result)
     elif secim==4:
-        charts.ders_grafigi(result)
         charts.gun_grafigi(result)
     elif secim==5:
-        pass
+        charts.ders_grafigi(result)
     elif secim==6:
-        pass
+        analysis.oneri_ver(result)
     elif secim==7:
         print("Programdan çıktınız.")
         break
